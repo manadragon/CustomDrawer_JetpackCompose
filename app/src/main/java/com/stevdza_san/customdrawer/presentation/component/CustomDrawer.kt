@@ -1,8 +1,10 @@
 package com.stevdza_san.customdrawer.presentation.component
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -49,11 +51,13 @@ fun CustomDrawer(
             }
         }
         Spacer(modifier = Modifier.height(24.dp))
-        Image(
-            modifier = Modifier.size(100.dp),
-            painter = painterResource(id = R.drawable.logo),
-            contentDescription = "Zodiac Image"
-        )
+        Row(horizontalArrangement = Arrangement.Start){
+            Image(
+                modifier = Modifier.size(100.dp),
+                painter = painterResource(id = R.drawable.logo),
+                contentDescription = "Zodiac Image"
+            )
+        }
         Spacer(modifier = Modifier.height(40.dp))
         NavigationItem.entries.toTypedArray().take(3).forEach { navigationItem ->
             NavigationItemView(
