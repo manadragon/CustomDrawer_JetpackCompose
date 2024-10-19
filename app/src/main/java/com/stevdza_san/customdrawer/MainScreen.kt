@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -133,6 +135,8 @@ fun MainContent(
                 fontSize = MaterialTheme.typography.titleMedium.fontSize,
                 fontWeight = FontWeight.Medium
             )
+
+            BasicTextField(state = TextFieldState())
         }
     }
 }
